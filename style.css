@@ -1,23 +1,37 @@
-
-/* Clean modern look with accent color */
 :root{
   --accent: #0066cc;
   --accent-2: #ff6b6b;
   --muted: #6b7280;
 }
+
+/* Body background */
 body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     color: #111;
-    /* Replace your old background line with this: */
-    background-image: url('assets/images/background.jpg'); /* path to your image */
-    background-size: cover;       /* makes it cover the whole screen */
-    background-repeat: no-repeat; /* don’t repeat the image */
-    background-position: center;  /* center the image */
+    background-image: url('assets/images/background.jpg'); /* your background image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+/* Make hero section transparent */
+.hero-spotlight { 
+    background: transparent; 
+}
+
+/* Make cards slightly transparent so background shows through */
+.card {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Other styles */
 .card img { height: 220px; object-fit: cover; }
 a { color: var(--accent); }
 .btn-primary { background-color: var(--accent); border-color: var(--accent); }
 .btn-outline-secondary { border-color: #ced4da; color: #333; }
 footer { color: var(--muted); }
-@media (max-width: 576px) { .profile-pic { width: 100px; height: 100px; } }
+.profile-pic { object-fit: cover; border: 4px solid rgba(0,102,204,0.12); }
+
+@media (max-width: 576px) { 
+    .profile-pic { width: 100px; height: 100px; } 
+}
