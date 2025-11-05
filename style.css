@@ -5,11 +5,16 @@
   --accent-2: #ff6b6b;
   --muted: #6b7280;
 }
-body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #111; background: #fff; }
-.navbar-brand { color: var(--accent); }
-.accent { color: var(--accent); }
-.hero-spotlight { background: linear-gradient(90deg, rgba(0,102,204,0.06), rgba(255,107,107,0.02)); }
-.profile-pic { object-fit: cover; border: 4px solid rgba(0,102,204,0.12); }
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #111;
+    /* Replace your old background line with this: */
+    background-image: url('assets/images/background.jpg'); /* path to your image */
+    background-size: cover;       /* makes it cover the whole screen */
+    background-repeat: no-repeat; /* don’t repeat the image */
+    background-position: center;  /* center the image */
+}
+
 .card img { height: 220px; object-fit: cover; }
 a { color: var(--accent); }
 .btn-primary { background-color: var(--accent); border-color: var(--accent); }
