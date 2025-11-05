@@ -4,24 +4,26 @@
     --muted: #6b7280;
 }
 
-/* Full-page background with gradient overlay for readability */
+/* Reset margins and ensure full height */
 html, body {
     height: 100%;
     margin: 0;
-}
-
-body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     color: #111;
+}
+
+/* Hero section with full background image + gradient overlay */
+.hero-spotlight {
     background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
                 url('assets/images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 100px 0; /* space for hero content */
 }
 
-/* Make all main content transparent so background shows */
-.hero-spotlight, .container, .row, .col, main {
+/* Make hero container transparent */
+.hero-spotlight .container {
     background-color: transparent !important;
 }
 
@@ -29,20 +31,17 @@ body {
 .card {
     background-color: rgba(255, 255, 255, 0.85);
     border: none;
+    border-radius: 10px;
 }
 
-/* Hero/profile picture styling */
-.profile-pic {
-    object-fit: cover;
-    border: 4px solid rgba(0,102,204,0.12);
-}
-
-/* Other styles */
+/* Card images styling */
 .card img { 
     height: 220px; 
     object-fit: cover; 
+    border-radius: 10px 10px 0 0;
 }
 
+/* Accent colors */
 a { color: var(--accent); }
 .btn-primary { 
     background-color: var(--accent); 
@@ -53,9 +52,24 @@ a { color: var(--accent); }
     color: #333; 
 }
 
-footer { color: var(--muted); }
+/* Footer styling */
+footer { 
+    color: var(--muted); 
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Profile picture styling */
+.profile-pic {
+    object-fit: cover;
+    border: 4px solid rgba(0,102,204,0.12);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 576px) { 
-    .profile-pic { width: 100px; height: 100px; } 
+    .profile-pic { width: 100px; height: 100px; }
+    .hero-spotlight { padding: 50px 0; }
 }
