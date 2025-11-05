@@ -4,7 +4,7 @@
     --muted: #6b7280;
 }
 
-/* Reset margins and ensure full height */
+/* Reset */
 html, body {
     height: 100%;
     margin: 0;
@@ -12,64 +12,71 @@ html, body {
     color: #111;
 }
 
-/* Hero section with full background image + gradient overlay */
+/* Hero Section with full-screen background */
 .hero-spotlight {
-    background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
-                url('assets/images/background.jpg');
+    width: 100%;
+    height: 100vh;
+    background: url('assets/images/background.jpg') no-repeat center center;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 100px 0; /* space for hero content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Make hero container transparent */
-.hero-spotlight .container {
-    background-color: transparent !important;
+.hero-content {
+    background-color: rgba(255,255,255,0.2); /* semi-transparent overlay */
+    padding: 30px 50px;
+    border-radius: 15px;
+    text-align: center;
 }
 
-/* Cards slightly transparent for readability */
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(0,102,204,0.12);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* Cards */
 .card {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255,255,255,0.85);
     border: none;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-/* Card images styling */
-.card img { 
-    height: 220px; 
-    object-fit: cover; 
+.card img {
+    height: 220px;
+    object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
 
-/* Accent colors */
+/* Accent Colors */
 a { color: var(--accent); }
-.btn-primary { 
-    background-color: var(--accent); 
-    border-color: var(--accent); 
-}
-.btn-outline-secondary { 
-    border-color: #ced4da; 
-    color: #333; 
-}
+.btn-primary { background-color: var(--accent); border-color: var(--accent); }
+.btn-outline-secondary { border-color: #ced4da; color: #333; }
 
-/* Footer styling */
+/* Footer */
 footer { 
     color: var(--muted); 
     text-align: center;
-    padding: 20px 0;
 }
 
-/* Profile picture styling */
-.profile-pic {
-    object-fit: cover;
-    border: 4px solid rgba(0,102,204,0.12);
-    border-radius: 50%;
-    width: 140px;
-    height: 140px;
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 576px) { 
     .profile-pic { width: 100px; height: 100px; }
-    .hero-spotlight { padding: 50px 0; }
+    .hero-content { padding: 20px 25px; }
+    h1 { font-size: 2rem; }
+    p { font-size: 1rem; }
 }
