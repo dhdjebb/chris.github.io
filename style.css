@@ -1,0 +1,18 @@
+
+/* Clean modern look with accent color */
+:root{
+  --accent: #0066cc;
+  --accent-2: #ff6b6b;
+  --muted: #6b7280;
+}
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #111; background: #fff; }
+.navbar-brand { color: var(--accent); }
+.accent { color: var(--accent); }
+.hero-spotlight { background: linear-gradient(90deg, rgba(0,102,204,0.06), rgba(255,107,107,0.02)); }
+.profile-pic { object-fit: cover; border: 4px solid rgba(0,102,204,0.12); }
+.card img { height: 220px; object-fit: cover; }
+a { color: var(--accent); }
+.btn-primary { background-color: var(--accent); border-color: var(--accent); }
+.btn-outline-secondary { border-color: #ced4da; color: #333; }
+footer { color: var(--muted); }
+@media (max-width: 576px) { .profile-pic { width: 100px; height: 100px; } }
