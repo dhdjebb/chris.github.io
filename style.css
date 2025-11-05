@@ -4,24 +4,29 @@
   --muted: #6b7280;
 }
 
-/* Body background */
+/* Full page background */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     color: #111;
-    background-image: url('assets/images/background.jpg'); /* your background image path */
+    background-image: url('assets/images/hero.jpg'); /* make sure this matches your file */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 /* Make hero section transparent */
-.hero-spotlight { 
-    background: transparent; 
+.hero-spotlight {
+    background: rgba(255,255,255,0.0) !important;
 }
 
 /* Make cards slightly transparent so background shows through */
 .card {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255,255,255,0.85);
 }
 
 /* Other styles */
