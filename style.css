@@ -12,15 +12,18 @@ html, body {
     color: #111;
 }
 
-/* Hero Section with full-screen background */
+/* Hero Section with light grey background */
 .hero-spotlight {
     width: 100%;
     height: 100vh;
-    background: url('assets/images/background.jpg') no-repeat center center;
-    background-size: cover;
+    background-color: #f5f5f5; /* light grey */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+}
+
 }
 
 .hero-content {
